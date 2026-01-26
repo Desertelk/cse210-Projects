@@ -1,5 +1,6 @@
 using System;
-
+//The changes that I made to this is making the scriptures a list where it contains various scriptures. Each time you run the program it will give you a new scripture
+// The next thing that I did was to determine how many words are hidden based on whether the scripture has one or several verses.
 class Program
 {
     static void Main(string[] args)
