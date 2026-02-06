@@ -27,9 +27,9 @@ class Program
         c4._text = "Is it because it likes spicy food?";
         comments1.Add(c4);
 
-        Video v = new Video("My Cat", "Donald", 30, comments1);
-        int count = v.NumberOfComments();
-        v.Display();
+        Video v1 = new Video("My Cat", "Donald", 30, comments1);
+        int count = v1.NumberOfComments();
+        v1.Display();
         Console.WriteLine($"There are {count} comments in this video");
 
         List<Comment> comments2 = new List<Comment>();
