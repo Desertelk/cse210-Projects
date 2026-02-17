@@ -9,18 +9,18 @@ public class EternalGoal : Goal
 
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        
     }
 
     public override string GetStringRepresentation()
     {
-        return $"{name} | {description} | {points}";
+        return $"{GetName()},{GetDescription()},{GetPoints()}";
         throw new NotImplementedException();
     }
 
     public override bool IsComplete()
     {
 
-        throw new NotImplementedException();
+        return false;
     }
 }

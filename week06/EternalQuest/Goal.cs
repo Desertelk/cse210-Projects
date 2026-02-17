@@ -17,7 +17,8 @@ public abstract class Goal
     public abstract bool IsComplete(); 
     public virtual string GetDetailsString()
     {
-        return $"[ ] {_shortName} ({_description})";
+        string status = IsComplete() ? "[X]" : "[ ]";
+        return $"{status} {_shortName} ({_description})";
     }
     public abstract string GetStringRepresentation();
 
@@ -26,5 +27,13 @@ public abstract class Goal
         return _shortName;
     }
 
-    public 
+    public string GetDescription()
+    {
+        return _description;
+    }
+
+    public int GetPoints()
+    {
+        return _points;
+    }
 }

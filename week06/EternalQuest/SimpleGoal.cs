@@ -4,24 +4,24 @@ public class SimpleGoal : Goal
 {
     private bool _isComplete;
 
-    public SimpleGoal(string name, string description, int points, bool isComplete)
+    public SimpleGoal(string name, string description, int points, bool isComplete = false)
         : base(name, description, points)
     {
-        _isComplete = false;
+        _isComplete = isComplete;
     }
 
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        _isComplete = true;
     }
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return _isComplete;
     }
 
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        return $"SimpleGoal:{GetName()},{GetDescription()},{GetPoints()},{_isComplete}";
     }
 }

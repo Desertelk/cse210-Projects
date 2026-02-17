@@ -16,21 +16,36 @@ public class ChecklistGoals : Goal
 
     public override string GetDetailsString()
     {
-        return base.GetDetailsString() + $" has been completed {_amountCompleted} times";
+        return base.GetDetailsString() + $" -- Completed {_amountCompleted}/{_target}";
     }
 
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        _amountCompleted++;
     }
 
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        return $"ChecklistGoal:{GetName()},{GetDescription()},{GetPoints},{_amountCompleted},{_target},{_bonus}";
     }
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return _amountCompleted >= _target;
+    }
+
+    public int GetBonus()
+    {
+        return _bonus;
+    }
+
+    public int GetAmountCompleted()
+    {
+        return _amountCompleted;
+    }
+
+    public int GetTarget()
+    {
+        return _target;
     }
 }
